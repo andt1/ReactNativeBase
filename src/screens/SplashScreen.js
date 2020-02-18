@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet,Image} from 'react-native';
+import * as SharedPreference from '../utilities/storages';
 
 const styles = StyleSheet.create({
   container : {
@@ -28,8 +29,13 @@ export default class SplashScreen extends React.Component {
 
   async componentDidMount() {
     const data = await this.performTimeConsumingTask();
+    const user = await SharedPreference.retrieveData();
     if (data !== null) {
-      this.props.navigation.navigate('Login');
+      if (user !== null && user !== undefined) {
+        this.props.navigation.navigate('Main');
+      } else {
+        this.props.navigation.navigate('Login');
+      }
     }
   }
 

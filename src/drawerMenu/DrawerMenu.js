@@ -26,6 +26,8 @@ const menuData = [
   {icon: "ios-heart-outline", name:"Wish List", screenName:"Hooli", key: 5},
   {icon: "ios-person-outline", name:"Profile", screenName:"Hooli", key: 6},
   {icon: "ios-settings-outline", name:"Settings", screenName:"Hooli", key: 7},
+  {icon: "ios-settings-outline", name:"Log out", screenName:"Hooli", key: 8},
+
 ];
 
 

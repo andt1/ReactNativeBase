@@ -19,6 +19,8 @@
 		5DD94B5C1C271E8DEC12E1CA /* libPods-VNTinder-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F28689F3970CE3964D5E76 /* libPods-VNTinder-tvOS.a */; };
 		7D6C4684AC0AB30FFAD8F275 /* libPods-VNTinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8B0E320526BBE73D16AFFB /* libPods-VNTinder.a */; };
 		8BACE523903513C7BEE84A42 /* libPods-VNTinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5874377C468E7BC0513FF4F6 /* libPods-VNTinderTests.a */; };
+		BABD405923FB87F000818D87 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD405823FB87F000818D87 /* Counter.swift */; };
+		BABD405B23FB880800818D87 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = BABD405A23FB880800818D87 /* Counter.m */; };
 		EC9B203EE6DAFC0B2A09DA86 /* libPods-VNTinder-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0342D8593F66FBADFCFF2844 /* libPods-VNTinder-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,9 @@
 		5874377C468E7BC0513FF4F6 /* libPods-VNTinderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VNTinderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F28689F3970CE3964D5E76 /* libPods-VNTinder-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VNTinder-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87CCDAD2CD7D9E3E4725BE3 /* Pods-VNTinder-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VNTinder-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-VNTinder-tvOS/Pods-VNTinder-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BABD405723FB87EF00818D87 /* VNTinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VNTinder-Bridging-Header.h"; sourceTree = "<group>"; };
+		BABD405823FB87F000818D87 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		BABD405A23FB880800818D87 /* Counter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 		BB3398192ACB447474DCDA14 /* Pods-VNTinder-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VNTinder-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-VNTinder-tvOSTests/Pods-VNTinder-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF51F1CC6E999BA71F1F3F29 /* Pods-VNTinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VNTinderTests.release.xcconfig"; path = "Target Support Files/Pods-VNTinderTests/Pods-VNTinderTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC723BDCF5023F0E77590907 /* Pods-VNTinder-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VNTinder-tvOS.release.xcconfig"; path = "Target Support Files/Pods-VNTinder-tvOS/Pods-VNTinder-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +137,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				BABD405823FB87F000818D87 /* Counter.swift */,
+				BABD405723FB87EF00818D87 /* VNTinder-Bridging-Header.h */,
+				BABD405A23FB880800818D87 /* Counter.m */,
 			);
 			name = VNTinder;
 			sourceTree = "<group>";
@@ -194,7 +202,6 @@
 				22D1DBEB782A8F3A40BEFF51 /* Pods-VNTinderTests.debug.xcconfig */,
 				CF51F1CC6E999BA71F1F3F29 /* Pods-VNTinderTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -292,6 +299,9 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1010;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -577,8 +587,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BABD405B23FB880800818D87 /* Counter.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				BABD405923FB87F000818D87 /* Counter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +643,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22D1DBEB782A8F3A40BEFF51 /* Pods-VNTinderTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -654,6 +667,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CF51F1CC6E999BA71F1F3F29 /* Pods-VNTinderTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = VNTinderTests/Info.plist;
@@ -675,6 +689,7 @@
 			baseConfigurationReference = 25E7D0264343365DFB68BC3A /* Pods-VNTinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = VNTinder/Info.plist;
@@ -686,6 +701,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = VNTinder;
+				SWIFT_OBJC_BRIDGING_HEADER = "VNTinder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -695,6 +713,7 @@
 			baseConfigurationReference = 48323BBF900577FB616E7703 /* Pods-VNTinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = VNTinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -705,6 +724,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = VNTinder;
+				SWIFT_OBJC_BRIDGING_HEADER = "VNTinder-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
