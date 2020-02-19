@@ -5,6 +5,7 @@ import {loginAction} from './actions';
 import { connect } from 'react-redux';
 import {isEmptyObject} from '../../utilities/utils';
 import * as SharedPreference from '../../utilities/storages'
+import CheckPermission from '../../utilities/CheckPermission'
 
 class LoginContainer extends React.Component {
     static navigationOptions = {
@@ -37,6 +38,10 @@ class LoginContainer extends React.Component {
                 TestClickHome = {this.TestClickHome}
                 {...this.props}/>
         );
+    }
+
+    async componentWillMount(): void {
+        await new CheckPermission();
     }
 
     goToLogin = async () => {

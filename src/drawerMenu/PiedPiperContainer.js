@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View, Platform} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View, Platform,Alert} from 'react-native';
 import {Button} from 'react-native-elements';
 // import {NativeModules, NativeEventEmitter} from 'react-native';
 import Counter from '../modules/Counter';
+import CheckPermission from '../utilities/CheckPermission';
 
 class PiedPiperContainer extends Component {
     static navigationOptions = ({navigation, screenProps}) => ({
@@ -17,6 +18,15 @@ class PiedPiperContainer extends Component {
             </View>
         ),
     });
+
+    async componentWillMount(): void {
+        const check = await new CheckPermission();
+        if(check.hasCameraPermission) {
+            Alert.alert("Permission","da co permission");
+        } else {
+            Alert.alert("Permission","chua co permission");
+        }
+    }
 
     constructor(props) {
         super(props);

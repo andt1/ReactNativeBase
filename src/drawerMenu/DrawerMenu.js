@@ -19,14 +19,14 @@ const userData = {
 
 
 const menuData = [
-  {icon: "ios-search", name:"Search", screenName:"PiedPiper", key: 1},
-  {icon: "ios-home-outline", name:"Home", screenName:"PiedPiper", key: 2},
-  {icon: "ios-chatboxes-outline", name:"Inbox", screenName:"PiedPiper", key: 3},
-  {icon: "ios-navigate-outline", name:"Trips", screenName:"Hooli", key: 4},
-  {icon: "ios-heart-outline", name:"Wish List", screenName:"Hooli", key: 5},
-  {icon: "ios-person-outline", name:"Profile", screenName:"Hooli", key: 6},
-  {icon: "ios-settings-outline", name:"Settings", screenName:"Hooli", key: 7},
-  {icon: "ios-settings-outline", name:"Log out", screenName:"Hooli", key: 8},
+  {icon: "search", name:"Search", screenName:"PiedPiper", key: 1},
+  {icon: "home", name:"Home", screenName:"PiedPiper", key: 2},
+  {icon: "chat", name:"Inbox", screenName:"PiedPiper", key: 3},
+  {icon: "access-alarms", name:"Trips", screenName:"Hooli", key: 4},
+  {icon: "adjust", name:"Wish List", screenName:"Hooli", key: 5},
+  {icon: "airplanemode-active", name:"Profile", screenName:"Hooli", key: 6},
+  {icon: "settings", name:"Settings", screenName:"Hooli", key: 7},
+  {icon: "power-settings-new", name:"Log out", screenName:"Hooli", key: 8},
 
 ];
 
