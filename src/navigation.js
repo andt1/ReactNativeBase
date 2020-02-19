@@ -20,10 +20,12 @@ import {
 } from 'react-navigation-redux-helpers';
 
 import {connect} from 'react-redux';
+import InboxScreen from './screens/inbox';
 
 const MainScreenNavigator = createStackNavigator({
     PiedPiper: { screen: PiedPiperContainer },
-    Hooli: { screen: HooliContainer }
+    Hooli: { screen: HooliContainer },
+    Inbox: { screen: InboxScreen }
 });
 
 export const AppNavigator = createDrawerNavigator({

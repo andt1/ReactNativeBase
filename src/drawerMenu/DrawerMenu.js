@@ -21,7 +21,7 @@ const userData = {
 const menuData = [
   {icon: "ios-search", name:"Search", screenName:"PiedPiper", key: 1},
   {icon: "ios-home-outline", name:"Home", screenName:"PiedPiper", key: 2},
-  {icon: "ios-chatboxes-outline", name:"Inbox", screenName:"PiedPiper", key: 3},
+  {icon: "ios-chatboxes-outline", name:"Inbox", screenName:"Inbox", key: 3},
   {icon: "ios-navigate-outline", name:"Trips", screenName:"Hooli", key: 4},
   {icon: "ios-heart-outline", name:"Wish List", screenName:"Hooli", key: 5},
   {icon: "ios-person-outline", name:"Profile", screenName:"Hooli", key: 6},
