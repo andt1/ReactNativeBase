@@ -20,10 +20,12 @@ import {
 } from 'react-navigation-redux-helpers';
 
 import {connect} from 'react-redux';
+import CalenderScreen from './screens/Calender/CalenderScreen';
 
 const MainScreenNavigator = createStackNavigator({
     PiedPiper: { screen: PiedPiperContainer },
-    Hooli: { screen: HooliContainer }
+    Hooli: { screen: HooliContainer },
+    Calender: {screen: CalenderScreen}
 });
 
 export const AppNavigator = createDrawerNavigator({
