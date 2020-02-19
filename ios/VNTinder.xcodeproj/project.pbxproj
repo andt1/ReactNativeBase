@@ -21,6 +21,8 @@
 		8BACE523903513C7BEE84A42 /* libPods-VNTinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5874377C468E7BC0513FF4F6 /* libPods-VNTinderTests.a */; };
 		BABD405923FB87F000818D87 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD405823FB87F000818D87 /* Counter.swift */; };
 		BABD405B23FB880800818D87 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = BABD405A23FB880800818D87 /* Counter.m */; };
+		BAEE4DC023FCE6300095559C /* ToastModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE4DBF23FCE6300095559C /* ToastModule.swift */; };
+		BAEE4DC223FCE8850095559C /* ToastModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEE4DC123FCE8850095559C /* ToastModule.m */; };
 		EC9B203EE6DAFC0B2A09DA86 /* libPods-VNTinder-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0342D8593F66FBADFCFF2844 /* libPods-VNTinder-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		BABD405723FB87EF00818D87 /* VNTinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VNTinder-Bridging-Header.h"; sourceTree = "<group>"; };
 		BABD405823FB87F000818D87 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		BABD405A23FB880800818D87 /* Counter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
+		BAEE4DBF23FCE6300095559C /* ToastModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModule.swift; sourceTree = "<group>"; };
+		BAEE4DC123FCE8850095559C /* ToastModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastModule.m; sourceTree = "<group>"; };
 		BB3398192ACB447474DCDA14 /* Pods-VNTinder-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VNTinder-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-VNTinder-tvOSTests/Pods-VNTinder-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF51F1CC6E999BA71F1F3F29 /* Pods-VNTinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VNTinderTests.release.xcconfig"; path = "Target Support Files/Pods-VNTinderTests/Pods-VNTinderTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC723BDCF5023F0E77590907 /* Pods-VNTinder-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VNTinder-tvOS.release.xcconfig"; path = "Target Support Files/Pods-VNTinder-tvOS/Pods-VNTinder-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 				BABD405823FB87F000818D87 /* Counter.swift */,
 				BABD405723FB87EF00818D87 /* VNTinder-Bridging-Header.h */,
 				BABD405A23FB880800818D87 /* Counter.m */,
+				BAEE4DBF23FCE6300095559C /* ToastModule.swift */,
+				BAEE4DC123FCE8850095559C /* ToastModule.m */,
 			);
 			name = VNTinder;
 			sourceTree = "<group>";
@@ -588,9 +594,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BABD405B23FB880800818D87 /* Counter.m in Sources */,
+				BAEE4DC023FCE6300095559C /* ToastModule.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				BABD405923FB87F000818D87 /* Counter.swift in Sources */,
+				BAEE4DC223FCE8850095559C /* ToastModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

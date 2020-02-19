@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {Image, NativeModules, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Image, NativeModules, Platform, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Button} from 'react-native-elements';
+import Counter from '../modules/Counter';
 
 const {ToastModule} = NativeModules;
 
@@ -21,25 +22,43 @@ class HooliContainer extends Component {
     });
 
     _onPressShowToast = () => {
-        ToastModule.showText('this is Android Toast', NativeModules.ToastModule.LENGTH_SHORT);
+        console.log('toast:', ToastModule);
+        alert('this is Android Toast');
     };
 
     _onPressCallBack = () => {
-        ToastModule.doCallbackTask(100, (name, email) => {
-            ToastModule.showText(`name: ${name}  , email: ${email}`, NativeModules.ToastModule.LENGTH_SHORT);
-        }, (error) => {
-            ToastModule.showText(`Error: ${error}`, NativeModules.ToastModule.LENGTH_LONG);
-        });
-
+        if (Platform.OS === 'ios') {
+            ToastModule.doCallbackTask(result => {
+                alert(`name: ${result}  , email: ${result}`);
+            });
+        } else {
+            ToastModule.doCallbackTask(100, (name, email) => {
+                alert(`name: ${name}  , email: ${email}`);
+            }, (error) => {
+                alert(`Error: ${error}`);
+            });
+        }
     };
 
 
     async _onPressPromise() {
-        try {
-            let result = await ToastModule.doPromiseTask(100)
-            ToastModule.showText(`Error: ${JSON.stringify(result)}`, NativeModules.ToastModule.LENGTH_LONG);
-        } catch (e) {
-            ToastModule.showText(`Error: ${e}`, NativeModules.ToastModule.LENGTH_LONG);
+        if (Platform.OS === 'ios') {
+            // ToastModule.doPromiseTask(100)
+            //     .then(res => console.log(res))
+            //     .catch(e => console.log(e.message, e.code))
+            try {
+                let result = await ToastModule.doPromiseTask();
+                alert(`Error: ${JSON.stringify(result)}`);
+            } catch (e) {
+                alert(`Error: ${e}`);
+            }
+        } else {
+            try {
+                let result = await ToastModule.doPromiseTask(100);
+                alert(`Error: ${JSON.stringify(result)}`);
+            } catch (e) {
+                alert(`Error: ${e}`);
+            }
         }
     }
 
