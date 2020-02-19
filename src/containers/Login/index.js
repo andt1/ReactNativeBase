@@ -22,6 +22,8 @@ class LoginContainer extends React.Component {
         this.goToLogin = this.goToLogin.bind(this);
         this.goToSignup = this.goToSignup.bind(this);
         this._onChangeText = this._onChangeText.bind(this);
+        this.TestClick = this.TestClick.bind(this);
+        this.TestClickHome = this.TestClickHome.bind(this);
     }
 
     render() {
@@ -31,6 +33,8 @@ class LoginContainer extends React.Component {
                 goToLogin = {this.goToLogin}
                 goToSignup = {this.goToSignup}
                 _onChangeText = {this._onChangeText}
+                TestClick = {this.TestClick}
+                TestClickHome = {this.TestClickHome}
                 {...this.props}/>
         );
     }
@@ -85,7 +89,15 @@ class LoginContainer extends React.Component {
         if (type === 'Password') {
             this.setState({password: value});
         }
-    }
+    };
+
+    TestClick = async () => {
+        Alert.alert("Vai dai","click menu");
+    };
+
+    TestClickHome = async () => {
+        Alert.alert("Vai dai","click home");
+    };
 
 }
 
