@@ -19,6 +19,10 @@
 		5DD94B5C1C271E8DEC12E1CA /* libPods-VNTinder-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F28689F3970CE3964D5E76 /* libPods-VNTinder-tvOS.a */; };
 		7D6C4684AC0AB30FFAD8F275 /* libPods-VNTinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8B0E320526BBE73D16AFFB /* libPods-VNTinder.a */; };
 		8BACE523903513C7BEE84A42 /* libPods-VNTinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5874377C468E7BC0513FF4F6 /* libPods-VNTinderTests.a */; };
+		BAB7FE5E23FD36A800BDC803 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAB7FE5D23FD36A800BDC803 /* GoogleService-Info.plist */; };
+		BAB7FE6723FD3AC600BDC803 /* RNFirebase.xcodeproj in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB7FE6023FD3A7700BDC803 /* RNFirebase.xcodeproj */; };
+		BAB7FE6923FD3B1500BDC803 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB7FE6823FD3B1500BDC803 /* UserNotifications.framework */; };
+		BAB7FE6B23FD435F00BDC803 /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB7FE6A23FD435F00BDC803 /* libRNFirebase.a */; };
 		BABD405923FB87F000818D87 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD405823FB87F000818D87 /* Counter.swift */; };
 		BABD405B23FB880800818D87 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = BABD405A23FB880800818D87 /* Counter.m */; };
 		BAEE4DC023FCE6300095559C /* ToastModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE4DBF23FCE6300095559C /* ToastModule.swift */; };
@@ -40,6 +44,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "VNTinder-tvOS";
+		};
+		BAB7FE6423FD3A7800BDC803 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAB7FE6023FD3A7700BDC803 /* RNFirebase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNFirebase;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -65,6 +76,11 @@
 		5874377C468E7BC0513FF4F6 /* libPods-VNTinderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VNTinderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F28689F3970CE3964D5E76 /* libPods-VNTinder-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VNTinder-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87CCDAD2CD7D9E3E4725BE3 /* Pods-VNTinder-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VNTinder-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-VNTinder-tvOS/Pods-VNTinder-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BAB7FE5D23FD36A800BDC803 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BAB7FE5F23FD36C000BDC803 /* VNTinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = VNTinder.entitlements; path = VNTinder/VNTinder.entitlements; sourceTree = "<group>"; };
+		BAB7FE6023FD3A7700BDC803 /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNFirebase.xcodeproj; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; };
+		BAB7FE6823FD3B1500BDC803 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		BAB7FE6A23FD435F00BDC803 /* libRNFirebase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNFirebase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABD405723FB87EF00818D87 /* VNTinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VNTinder-Bridging-Header.h"; sourceTree = "<group>"; };
 		BABD405823FB87F000818D87 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		BABD405A23FB880800818D87 /* Counter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
@@ -91,6 +107,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB7FE6B23FD435F00BDC803 /* libRNFirebase.a in Frameworks */,
+				BAB7FE6923FD3B1500BDC803 /* UserNotifications.framework in Frameworks */,
+				BAB7FE6723FD3AC600BDC803 /* RNFirebase.xcodeproj in Frameworks */,
 				7D6C4684AC0AB30FFAD8F275 /* libPods-VNTinder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +153,8 @@
 		13B07FAE1A68108700A75B9A /* VNTinder */ = {
 			isa = PBXGroup;
 			children = (
+				BAB7FE5F23FD36C000BDC803 /* VNTinder.entitlements */,
+				BAB7FE5D23FD36A800BDC803 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -153,6 +174,9 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAB7FE6A23FD435F00BDC803 /* libRNFirebase.a */,
+				BAB7FE6823FD3B1500BDC803 /* UserNotifications.framework */,
+				BAB7FE6023FD3A7700BDC803 /* RNFirebase.xcodeproj */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2F8B0E320526BBE73D16AFFB /* libPods-VNTinder.a */,
@@ -192,6 +216,14 @@
 				00E356EE1AD99517003FC87E /* VNTinderTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* VNTinder-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* VNTinder-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAB7FE6123FD3A7700BDC803 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAB7FE6523FD3A7800BDC803 /* libRNFirebase.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -307,7 +339,17 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = P82S49663G;
 						LastSwiftMigration = 1010;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -331,6 +373,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BAB7FE6123FD3A7700BDC803 /* Products */;
+					ProjectRef = BAB7FE6023FD3A7700BDC803 /* RNFirebase.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* VNTinder */,
@@ -340,6 +388,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BAB7FE6523FD3A7800BDC803 /* libRNFirebase.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNFirebase.a;
+			remoteRef = BAB7FE6423FD3A7800BDC803 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -355,6 +413,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				BAB7FE5E23FD36A800BDC803 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,8 +757,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = VNTinder/VNTinder.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = P82S49663G;
 				INFOPLIST_FILE = VNTinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -707,8 +769,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = gzr.bsd.dev;
 				PRODUCT_NAME = VNTinder;
+				PROVISIONING_PROFILE_SPECIFIER = "GZR Enterprise AppID Dev Profile";
 				SWIFT_OBJC_BRIDGING_HEADER = "VNTinder-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -722,7 +785,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = VNTinder/VNTinder.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P82S49663G;
 				INFOPLIST_FILE = VNTinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -730,8 +796,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = gzr.bsd.dev;
 				PRODUCT_NAME = VNTinder;
+				PROVISIONING_PROFILE_SPECIFIER = "GZR Enterprise AppID Dev Profile";
 				SWIFT_OBJC_BRIDGING_HEADER = "VNTinder-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";

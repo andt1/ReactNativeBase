@@ -5,10 +5,34 @@ import {
     Text,
     ListView,
     Image,
-    StyleSheet
+    StyleSheet, Alert,
 } from 'react-native';
 import * as Constants from '../utilities/constants';
 import * as SharedPreference from '../utilities/storages'
+
+const _onPressLogout = (navigation) => {
+    Alert.alert(
+        "Confirm",
+        "Are you sure that you want to logout?",
+        [
+            {
+                text: "No",
+                onPress: () => {
+                    console.log("No, continue editing")
+                }
+            },
+            {
+                text: "Yes",
+                onPress: () => {
+                    console.log("Yes, discard changes")
+                    SharedPreference.clearAllData().then(r => navigation.navigate('Login'))
+                },
+                style: "cancel"
+            }
+        ],
+        { cancelable: false }
+    );
+}
 
 const DrawerItem = ({navigation, icon, name, screenName}) =>
     <TouchableOpacity
@@ -16,8 +40,7 @@ const DrawerItem = ({navigation, icon, name, screenName}) =>
         onPress={() => {
             //check logout
             if (name === 'Log out') {
-                SharedPreference.clearAllData()
-                navigation.navigate('Login');
+                _onPressLogout(navigation)
             } else {
                 navigation.navigate(`${screenName}`, {isStatusBarHidden: false});
             }

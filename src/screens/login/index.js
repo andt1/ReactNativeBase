@@ -22,7 +22,10 @@ export default class login extends React.Component {
                                    keyboardType="email-address"
                                    underlineColorAndroid='transparent'
                                    autoCapitalize='none'
-                                   onChangeText={(email) => this.props._onChangeText(email, 'Email')}/>
+                                   onChangeText={(email) => this.props._onChangeText(email, 'Email')}
+                                    value={this.props.state.email}
+                        />
+
                     </View>
                     <View style={styles.inputContainer}>
                         <Image style={styles.inputIcon} source={{uri: 'https://img.icons8.com/2266EE/password'}}/>
@@ -30,7 +33,9 @@ export default class login extends React.Component {
                                    placeholder="Password"
                                    secureTextEntry={true}
                                    underlineColorAndroid='transparent'
-                                   onChangeText={(password) => this.props._onChangeText(password, 'Password')}/>
+                                   onChangeText={(password) => this.props._onChangeText(password, 'Password')}
+                                   value={this.props.state.password}
+                        />
                     </View>
                     <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} onPress={this.props.goToLogin}>
                         <Text style={styles.loginText}>Login</Text>

@@ -34,6 +34,10 @@ target 'VNTinder' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  # Pods for ReactPushNotifications - Add these lines
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  
   target 'VNTinderTests' do
     inherit! :search_paths
     # Pods for testing

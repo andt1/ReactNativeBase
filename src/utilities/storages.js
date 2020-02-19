@@ -32,4 +32,5 @@ export const clearAllData = async () => {
     }).then(() => {
         console.log('clearAllData success')
     })
-}
+    return result;
+};
