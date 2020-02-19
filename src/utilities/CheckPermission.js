@@ -47,7 +47,7 @@ class CheckPermission {
             const granted = await PermissionsAndroid.request(
                 PermissionsAndroid.PERMISSIONS.CAMERA,
                 {
-                    title: 'Salefie Photo App Camera Permission',
+                    title: 'App Camera Permission',
                     message: 'Bạn cần cấp quyền truy cập camera để thực hiện chức năng chụp ảnh',
                     buttonPositive: 'Đồng ý',
                 },
