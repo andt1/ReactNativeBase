@@ -21,13 +21,12 @@ const userData = {
 const menuData = [
   {icon: "search", name:"Search", screenName:"PiedPiper", key: 1},
   {icon: "home", name:"Home", screenName:"PiedPiper", key: 2},
-  {icon: "chat", name:"Inbox", screenName:"PiedPiper", key: 3},
+  {icon: "camera", name:"Camera", screenName:"CameraContainer", key: 3},
   {icon: "access-alarms", name:"Trips", screenName:"Hooli", key: 4},
   {icon: "adjust", name:"Wish List", screenName:"Hooli", key: 5},
   {icon: "airplanemode-active", name:"Profile", screenName:"Hooli", key: 6},
   {icon: "settings", name:"Settings", screenName:"Hooli", key: 7},
   {icon: "power-settings-new", name:"Log out", screenName:"Hooli", key: 8},
-
 ];
 
 
