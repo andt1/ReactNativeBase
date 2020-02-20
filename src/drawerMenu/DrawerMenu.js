@@ -21,7 +21,7 @@ const userData = {
 const menuData = [
   {icon: "ios-search", name:"Search", screenName:"PiedPiper", key: 1},
   {icon: "ios-home-outline", name:"Calender", screenName:"Calender", key: 2},
-  {icon: "ios-chatboxes-outline", name:"Inbox", screenName:"PiedPiper", key: 3},
+  {icon: "ios-chatboxes-outline", name:"Notification", screenName:"Notification", key: 3},
   {icon: "ios-navigate-outline", name:"Trips", screenName:"Hooli", key: 4},
   {icon: "ios-heart-outline", name:"Wish List", screenName:"Hooli", key: 5},
   {icon: "ios-person-outline", name:"Profile", screenName:"Hooli", key: 6},
@@ -39,7 +39,8 @@ class DrawerMenu extends Component {
         <ProfileComponent profileUrl={userData.profileUrl} username={userData.username} email={userData.email} />
         <FlatList
           data={menuData}
-          renderItem={({item}) => <DrawerItem navigation={this.props.navigation} screenName={item.screenName} icon={item.icon} name={item.name} key={item.key} />}
+          renderItem={({item}) => <DrawerItem navigation={this.props.navigation} screenName={item.screenName} icon={item.icon} name={item.name} key={item.key}
+          />}
         />
       </View>
     );

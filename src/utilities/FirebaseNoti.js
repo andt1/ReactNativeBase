@@ -2,15 +2,25 @@ import React, {Component} from 'react';
 import {Alert, View} from 'react-native';
 import firebase from 'react-native-firebase';
 import AsyncStorage from '@react-native-community/async-storage';
+import {Button} from 'react-native-elements';
+import {withNavigation} from 'react-navigation';
 
-export default class FirebaseNoti extends Component {
+class FirebaseNoti extends Component {
+
+    constructor(props) {
+        super(props);
+    }
+
     async componentDidMount() {
+        console.log('componentDidMount')
         this.checkPermission();
         this.createNotificationListeners();
     }
 
     //1
     async checkPermission() {
+        console.log('checkPermission')
+
         const enabled = await firebase.messaging().hasPermission();
         if (enabled) {
             this.getToken();
@@ -21,9 +31,12 @@ export default class FirebaseNoti extends Component {
 
     //3
     async getToken() {
-        let fcmToken = await AsyncStorage.getItem('fcmToken', value);
+        console.log('Device token')
+        let fcmToken = await AsyncStorage.getItem('fcmToken');
+        console.log('Device token:', fcmToken)
         if (!fcmToken) {
             fcmToken = await firebase.messaging().getToken();
+            console.log('Device token1:', fcmToken)
             if (fcmToken) {
                 // user has a device token
                 await AsyncStorage.setItem('fcmToken', fcmToken);
@@ -56,16 +69,19 @@ export default class FirebaseNoti extends Component {
         * Triggered when a particular notification has been received in foreground
         * */
         this.notificationListener = firebase.notifications().onNotification((notification) => {
-            const {title, body} = notification;
-            this.showAlert(title, body);
+            const {_title, _body} = notification;
+            console.log("onNotification:", notification._title, notification._body)
+            this.hanldeNotification(_title, _body);
         });
 
         /*
         * If your app is in background, you can listen for when a notification is clicked / tapped / opened as follows:
         * */
         this.notificationOpenedListener = firebase.notifications().onNotificationOpened((notificationOpen) => {
-            const {title, body} = notificationOpen.notification;
-            this.showAlert(title, body);
+            const {_title, _body} = notificationOpen.notification;
+            console.log("onNotificationOpened:", notificationOpen._title, notification._body)
+
+            this.hanldeNotification(_title, _body);
         });
 
         /*
@@ -73,8 +89,9 @@ export default class FirebaseNoti extends Component {
         * */
         const notificationOpen = await firebase.notifications().getInitialNotification();
         if (notificationOpen) {
-            const {title, body} = notificationOpen.notification;
-            this.showAlert(title, body);
+            const {_title, _body} = notificationOpen.notification;
+            console.log("getInitialNotification:", notificationOpen._title, notification._body)
+            this.hanldeNotification(_title, _body);
         }
         /*
         * Triggered for data only payload in foreground
@@ -85,16 +102,15 @@ export default class FirebaseNoti extends Component {
         });
     }
 
-    showAlert = (title, body) => {
+    hanldeNotification = (title, body) => {
+        console.log(`Notification =>title: ${title},  body: ${body}`);
+
         Alert.alert(
             title, body,
             [
                 {
                     text: 'OK', onPress: () => {
-                        console.log('OK Pressed')
-                        if (body === "Calender") {
-
-                        }
+                        this.props.navigation.navigate('Notification');
                     },
                 },
             ],
@@ -102,7 +118,22 @@ export default class FirebaseNoti extends Component {
         );
     };
 
+    _onPressButton = () => {
+        this.props.navigation.navigate('Notification');
+    }
+
     render() {
-        return <View></View>;
+        return <View style={{
+            // backgroundColor: 'red',
+            // flex: 1, justifyContent:'center'
+        }}>
+            {/*<Button*/}
+            {/*    title="Notification"*/}
+            {/*    type="outline"*/}
+            {/*    onPress={this._onPressButton}*/}
+            {/*/>*/}
+        </View>;
     }
 }
+
+export default FirebaseNoti

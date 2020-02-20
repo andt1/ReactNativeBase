@@ -758,6 +758,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = VNTinder/VNTinder.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
@@ -786,6 +787,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = VNTinder/VNTinder.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P82S49663G;
@@ -798,7 +800,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = gzr.bsd.dev;
 				PRODUCT_NAME = VNTinder;
-				PROVISIONING_PROFILE_SPECIFIER = "GZR Enterprise AppID Dev Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "GZR Enterprise AppID InHouse Profile";
 				SWIFT_OBJC_BRIDGING_HEADER = "VNTinder-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";

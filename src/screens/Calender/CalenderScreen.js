@@ -2,13 +2,17 @@ import React from 'react';
 import {Image, Text, View} from 'react-native';
 import styles from './styles';
 import {Calendar, Agenda} from 'react-native-calendars';
+import {Button} from 'react-native-elements';
 
 const vacation = {key:'vacation', color: 'red', selectedDotColor: 'blue'};
 const massage = {key:'massage', color: 'blue', selectedDotColor: 'blue'};
 const workout = {key:'workout', color: 'green'};
 
-export default class Screen extends React.Component {
+export default class CalenderScreen extends React.Component {
 
+    _onPressButton = () => {
+        this.props.navigation.navigate('Notification');
+    }
 
     render() {
         return (
@@ -104,6 +108,11 @@ export default class Screen extends React.Component {
                 {/*    // Agenda container style*/}
                 {/*    style={{}}*/}
                 {/*/>*/}
+                <Button
+                    title="Notification"
+                    type="outline"
+                    onPress={this._onPressButton}
+                />
             </View>
         );
     }

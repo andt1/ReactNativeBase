@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "791360036976",
+    "firebase_url": "https://reactnativebase-bc531.firebaseio.com",
+    "project_id": "reactnativebase-bc531",
+    "storage_bucket": "reactnativebase-bc531.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791360036976:android:14fa2c7de7cd113b9d14b5",
+        "android_client_info": {
+          "package_name": "com.vntinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791360036976-sn9kr8dggj75si2e40u9vd16qm7sma6v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vntinder",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "791360036976-ata3b1ra08sf7h75a183u36u7u91tdf1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3b_JB12cTjSBhrB5Yg9vBQ4y8UNp0csM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791360036976-ata3b1ra08sf7h75a183u36u7u91tdf1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "791360036976-74splbpcn5lb4ovtd2nc5ernl617hnuu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "gzr.bsd.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

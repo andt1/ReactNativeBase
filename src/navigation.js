@@ -21,11 +21,15 @@ import {
 
 import {connect} from 'react-redux';
 import CalenderScreen from './screens/Calender/CalenderScreen';
+import NotificationScreen from './screens/Notification/NotificationScreen';
+import FirebaseNoti from './utilities/FirebaseNoti';
 
 const MainScreenNavigator = createStackNavigator({
     PiedPiper: { screen: PiedPiperContainer },
     Hooli: { screen: HooliContainer },
-    Calender: {screen: CalenderScreen}
+    Calender: {screen: CalenderScreen},
+    Notification: {screen: NotificationScreen},
+    // FirebaseNoti: { screen: FirebaseNoti }
 });
 
 export const AppNavigator = createDrawerNavigator({
