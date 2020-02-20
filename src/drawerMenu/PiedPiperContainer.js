@@ -1,22 +1,27 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View, Platform} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View, Platform,Alert} from 'react-native';
 import {Button} from 'react-native-elements';
 // import {NativeModules, NativeEventEmitter} from 'react-native';
 import Counter from '../modules/Counter';
+import CheckPermission from '../utilities/CheckPermission';
+import { Header } from 'react-native-elements';
+import IonIcon from 'react-native-vector-icons/dist/MaterialIcons'
+import GeneralStatusBarColor from '../statusBar/GeneralStatusBarColor'
 
 class PiedPiperContainer extends Component {
-    static navigationOptions = ({navigation, screenProps}) => ({
-        drawerLabel: 'Pied Piper',
-        title: 'Pied Piper',
-        headerLeft: (
-            <View style={{paddingHorizontal: 10}}>
-                <TouchableOpacity onPress={() => navigation.openDrawer()}>
-                    {/*<Icon name="menu" size={30} color="blue" />*/}
-                    <Image source={require('../assets/img/hooli.png')} style={{width: 30, height: 30}}/>
-                </TouchableOpacity>
-            </View>
-        ),
-    });
+
+    static navigationOptions = {
+        header: null,
+    };
+
+    async componentWillMount(): void {
+        const check = await new CheckPermission();
+        if(check.hasCameraPermission) {
+            Alert.alert("Permission","da co permission");
+        } else {
+            Alert.alert("Permission","chua co permission");
+        }
+    }
 
     constructor(props) {
         super(props);
@@ -95,36 +100,56 @@ class PiedPiperContainer extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <Image source={require('../assets/img/piedpiper.png')}/>
-                <Button
-                    title="constantsToExport"
-                    type="clear"
-                    onPress={this._onPressConstantsToExport}
+            <View style={{flex:1}}>
+                <GeneralStatusBarColor backgroundColor="#772ea2"
+                                       barStyle="light-content"/>
+                <Header
+                    statusBarProps={{ translucent: true }}
+                    leftComponent={<IonIcon name='menu' size={28} color="#fff" onPress={()=>this.props.navigation.openDrawer()}/>}
+                    centerComponent={{
+                        text: 'Pied Piper',
+                        style: {
+                            fontSize: 18,
+                            fontWeight: 'bold',
+                            color: 'white',
+                        }
+                    }}
+                    containerStyle={{paddingTop:0,height: Platform.select({
+                            android: 56,
+                            default: 44,
+                        }),}}
                 />
-                <Button
-                    title="normal func"
-                    type="clear"
-                    onPress={this._onPressNormalFunc}
-                />
+                <View style={styles.container}>
+                    <Image source={require('../assets/img/piedpiper.png')}/>
+                    <Button
+                        title="constantsToExport"
+                        type="clear"
+                        onPress={this._onPressConstantsToExport}
+                    />
+                    <Button
+                        title="normal func"
+                        type="clear"
+                        onPress={this._onPressNormalFunc}
+                    />
 
-                <Button
-                    title="callback func"
-                    type="clear"
-                    onPress={this._onPressCallbackFunc}
-                />
+                    <Button
+                        title="callback func"
+                        type="clear"
+                        onPress={this._onPressCallbackFunc}
+                    />
 
-                <Button
-                    title="Swift promise"
-                    type="clear"
-                    onPress={this._onPressSwiffPromise}
-                />
+                    <Button
+                        title="Swift promise"
+                        type="clear"
+                        onPress={this._onPressSwiffPromise}
+                    />
 
-                <Button
-                    title="Swift Event Emitter"
-                    type="clear"
-                    onPress={this._onPressSwiftEventEmitter}
-                />
+                    <Button
+                        title="Swift Event Emitter"
+                        type="clear"
+                        onPress={this._onPressSwiftEventEmitter}
+                    />
+                </View>
             </View>
         );
     }
