@@ -42,6 +42,9 @@ target 'VNTinder' do
   pod 'Permission-LocationAlways', :path => "#{permissions_path}/LocationAlways.podspec"
   pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse.podspec"
 
+   # Third party deps podspec link
+   pod 'react-native-camera', path: '../node_modules/react-native-camera'
+
   target 'VNTinderTests' do
     inherit! :search_paths
     # Pods for testing

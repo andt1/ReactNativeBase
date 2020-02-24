@@ -3,6 +3,9 @@ import {Button, Text, View, BackHandler, Alert} from 'react-native';
 import {createAppContainer, withNavigation} from 'react-navigation';
 import {createStackNavigator, TransitionPresets} from 'react-navigation-stack';
 import PermissionExample from './permissionExample';
+import CameraExample from './cameraExample';
+import PhotoView from './PhotoView';
+import SimpleCameraExample from './simpleCamera';
 
 //demo screen transition
 class HomeScreen extends React.Component {
@@ -43,6 +46,13 @@ class HomeScreen extends React.Component {
                 <Button
                     title="PermissionExample"
                     onPress={() => this.props.navigation.navigate('PermissionEx')}
+                />
+                <View style={{height: 5}}/><Button
+                    title="SimpleCameraExample"
+                    onPress={() => this.props.navigation.navigate('SimpleCameraEx')}
+                /><View style={{height: 5}}/><Button
+                    title="CameraExample"
+                    onPress={() => this.props.navigation.navigate('CameraEx')}
                 />
                 <View style={{height: 5}}/>
                 <Button
@@ -127,6 +137,9 @@ const RootStack = createStackNavigator(
         Home: HomeScreen,
         Details: DetailsScreen,
         PermissionEx: PermissionExample,
+        SimpleCameraEx: SimpleCameraExample,
+        CameraEx: CameraExample,
+        PhotoView: PhotoView,
     },
     {
         initialRouteName: 'Home',
