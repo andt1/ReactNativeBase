@@ -8,11 +8,12 @@ import Signup from './containers/Signup/index';
 import MainScreens from './containers/Main/index';
 import {createDrawerNavigator} from 'react-navigation-drawer';
 
-import DrawerMenu from './drawerMenu/DrawerMenu'
+import DrawerMenu from './drawerMenu/DrawerMenu';
 import PiedPiperContainer from './drawerMenu/PiedPiperContainer';
 import HooliContainer from './drawerMenu/HooliContainer';
+import CameraContainer from './containers/Camera/index';
 
-import { TransitionSpecs } from 'react-navigation-stack';
+import {TransitionSpecs} from 'react-navigation-stack';
 
 import {
     createReactNavigationReduxMiddleware,
@@ -25,11 +26,11 @@ import NotificationScreen from './screens/Notification/NotificationScreen';
 import FirebaseNoti from './utilities/FirebaseNoti';
 
 const MainScreenNavigator = createStackNavigator({
-    PiedPiper: { screen: PiedPiperContainer },
-    Hooli: { screen: HooliContainer },
+    PiedPiper: {screen: PiedPiperContainer},
+    Hooli: {screen: HooliContainer},
     Calender: {screen: CalenderScreen},
     Notification: {screen: NotificationScreen},
-    FirebaseNoti: { screen: FirebaseNoti }
+    FirebaseNoti: {screen: FirebaseNoti},
 });
 
 export const AppNavigator = createDrawerNavigator({
@@ -45,12 +46,16 @@ export const AppNavigator = createDrawerNavigator({
     Main: {
         screen: MainScreenNavigator,
     },
-    FirebaseNoti: { screen: FirebaseNoti }
-
+    FirebaseNoti: {
+        screen: FirebaseNoti
+    },
+    CameraContainer: {
+        screen: CameraContainer,
+    },
 }, {
     initialRouteName: 'Splash',
     contentComponent: DrawerMenu,
-    mode: Platform.OS === "ios" ? "modal" : "card"
+    mode: Platform.OS === 'ios' ? 'modal' : 'card',
 });
 
 export const middleware = createReactNavigationReduxMiddleware(

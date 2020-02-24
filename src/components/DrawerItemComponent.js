@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import * as Constants from '../utilities/constants';
 import * as SharedPreference from '../utilities/storages'
+import IonIcon from 'react-native-vector-icons/dist/MaterialIcons'
 
 const _onPressLogout = (navigation) => {
     Alert.alert(
@@ -45,8 +46,7 @@ const DrawerItem = ({navigation, icon, name, screenName}) =>
                 navigation.navigate(`${screenName}`, {isStatusBarHidden: false});
             }
         }}>
-        {/*<Icon name ='caretup' size={25} color="#333" style={{margin:15}} />*/}
-        <Image source={{uri: 'https://img.icons8.com/2266EE/email'}} style={{width: 25, height: 25, margin: 12}}/>
+        <IonIcon name={icon} size={25} color="#333" style={{margin:15}}/>
         <Text style={styles.menuItemText}>{name}</Text>
     </TouchableOpacity>;
 

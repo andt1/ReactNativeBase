@@ -13,7 +13,7 @@ class HooliContainer extends Component {
         title: 'Hooli',
         headerLeft: (
             <View style={{paddingHorizontal: 10}}>
-                <TouchableOpacity onPress={() => navigation.navigate('DrawerOpen')}>
+                <TouchableOpacity onPress={() => navigation.openDrawer()}>
                     {/*<Icon name="menu" size={30} color="blue" />*/}
                     <Image source={require('../assets/img/piedpiper.png')} style={{width: 30, height: 30}}/>
                 </TouchableOpacity>

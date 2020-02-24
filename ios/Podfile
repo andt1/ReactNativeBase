@@ -38,6 +38,9 @@ target 'VNTinder' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera.podspec"
+  pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary.podspec"
   target 'VNTinderTests' do
     inherit! :search_paths
     # Pods for testing

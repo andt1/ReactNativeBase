@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import {isEmptyObject} from '../../utilities/utils';
 import * as SharedPreference from '../../utilities/storages';
 import * as Validates from '../../utilities/Validates';
+import CheckPermission from '../../utilities/CheckPermission'
 
 class LoginContainer extends React.Component {
     static navigationOptions = {
@@ -23,17 +24,25 @@ class LoginContainer extends React.Component {
         this.goToLogin = this.goToLogin.bind(this);
         this.goToSignup = this.goToSignup.bind(this);
         this._onChangeText = this._onChangeText.bind(this);
+        this.TestClick = this.TestClick.bind(this);
+        this.TestClickHome = this.TestClickHome.bind(this);
     }
 
     render() {
         return (
             <LoginScreen
                 state={this.state}
-                goToLogin={this.goToLogin}
-                goToSignup={this.goToSignup}
-                _onChangeText={this._onChangeText}
+                goToLogin = {this.goToLogin}
+                goToSignup = {this.goToSignup}
+                _onChangeText = {this._onChangeText}
+                TestClick = {this.TestClick}
+                TestClickHome = {this.TestClickHome}
                 {...this.props}/>
         );
+    }
+
+    async componentWillMount(): void {
+        await new CheckPermission();
     }
 
     goToLogin = async () => {
@@ -95,6 +104,14 @@ class LoginContainer extends React.Component {
         if (type === 'Password') {
             this.setState({password: value});
         }
+    };
+
+    TestClick = async () => {
+        Alert.alert("Vai dai","click menu");
+    };
+
+    TestClickHome = async () => {
+        Alert.alert("Vai dai","click home");
     };
 
 }
