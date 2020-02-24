@@ -8,13 +8,13 @@ export default class NotificationScreen extends React.Component {
     }
 
     render() {
-        // const title = this.props.navigation.state.params.title;
-        // const body = this.props.navigation.state.params.body;
+        const title = this.props.navigation.state.params.title;
+        const body = this.props.navigation.state.params.body;
 
         return (
             <View style={styles.container}>
-                {/*<Text>Title: {title}</Text>*/}
-                {/*<Text>Body: {body}</Text>*/}
+                <Text>Title: {title}</Text>
+                <Text>Body: {body}</Text>
             </View>
         );
     }

@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet,Image} from 'react-native';
 import * as SharedPreference from '../utilities/storages';
+import FirebaseNoti from '../utilities/FirebaseNoti';
 
 const styles = StyleSheet.create({
   container : {
@@ -44,6 +45,7 @@ export default class SplashScreen extends React.Component {
     return (
       <View style={styles.container}>
         <Image source={require('../assets/splash.jpeg')} style = {styles.backgroundImage}/>
+        <FirebaseNoti navigation={this.props.navigation}/>
       </View>
     );
   }

@@ -28,7 +28,7 @@ export default class App extends React.Component {
             <Provider store={store}>
                 <Root>
                     <Navigator/>
-                    <FirebaseNoti/>
+                    {/*<FirebaseNoti/>*/}
                 </Root>
             </Provider>
         );

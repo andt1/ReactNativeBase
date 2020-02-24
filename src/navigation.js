@@ -29,7 +29,7 @@ const MainScreenNavigator = createStackNavigator({
     Hooli: { screen: HooliContainer },
     Calender: {screen: CalenderScreen},
     Notification: {screen: NotificationScreen},
-    // FirebaseNoti: { screen: FirebaseNoti }
+    FirebaseNoti: { screen: FirebaseNoti }
 });
 
 export const AppNavigator = createDrawerNavigator({
@@ -45,6 +45,8 @@ export const AppNavigator = createDrawerNavigator({
     Main: {
         screen: MainScreenNavigator,
     },
+    FirebaseNoti: { screen: FirebaseNoti }
+
 }, {
     initialRouteName: 'Splash',
     contentComponent: DrawerMenu,
