@@ -11,6 +11,7 @@ import {createDrawerNavigator} from 'react-navigation-drawer';
 import DrawerMenu from './drawerMenu/DrawerMenu'
 import PiedPiperContainer from './drawerMenu/PiedPiperContainer';
 import HooliContainer from './drawerMenu/HooliContainer';
+import CameraContainer from './containers/Camera/index'
 
 import { TransitionSpecs } from 'react-navigation-stack';
 
@@ -41,6 +42,9 @@ export const AppNavigator = createDrawerNavigator({
     Main: {
         screen: MainScreenNavigator,
     },
+    CameraContainer: {
+        screen: CameraContainer
+    }
 }, {
     initialRouteName: 'Splash',
     contentComponent: DrawerMenu,
